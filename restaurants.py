@@ -111,3 +111,5 @@ def read_restaurants(file):
     price_to_names = {'$': [], '$$': [], '$$$': [], '$$$$': []}
     cuisine_to_names = {}
 
+    return name_to_rating, price_to_names, cuisine_to_names
+
