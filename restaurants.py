@@ -111,5 +111,25 @@ def read_restaurants(file):
     price_to_names = {'$': [], '$$': [], '$$$': [], '$$$$': []}
     cuisine_to_names = {}
 
+    with open(file) as f:
+        while True:
+            name = f.readline().strip()
+            rating = f.readline().strip()
+            name_to_rating[name] = rating
+            price = f.readline().strip()
+            price_to_names[price].append(name)
+            cuisine = f.readline().strip()
+            cuisines = cuisine.split(",")
+            for cuisine in cuisines:
+                if cuisine in cuisine_to_names:
+                    cuisine_to_names[cuisine.strip()].append(name)
+                else:
+                    cuisine_to_names[cuisine.strip()] = [name]
+            blank = f.readline()
+            if blank == "":
+                break
+
+
+
     return name_to_rating, price_to_names, cuisine_to_names
 
