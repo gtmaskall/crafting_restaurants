@@ -86,7 +86,7 @@ def filter_by_cuisine(names_matching_price, cuisine_to_names, cuisines_list):
     """ (list of str, dict of {str: list of str}, list of str) -> list of str
 
     >>> names = ['Queen St. Cafe', 'Dumplings R Us', 'Deep Fried Everything']
-    >>> cuis = 'Canadian': ['Georgie Porgie'],
+    >>> cuis = {'Canadian': ['Georgie Porgie'],
      'Pub Food': ['Georgie Porgie', 'Deep Fried Everything'],
      'Malaysian': ['Queen St. Cafe'],
      'Thai': ['Queen St. Cafe'],
