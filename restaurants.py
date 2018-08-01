@@ -97,6 +97,12 @@ def filter_by_cuisine(names_matching_price, cuisine_to_names, cuisines_list):
     ['Queen St. Cafe', 'Dumplings R Us']
     """
 
+    names_filtered = [current_name for cuisine in cuisines_list 
+            for current_name in names_matching_price 
+            if current_name in cuisine_to_names[cuisine]]
+    return names_filtered
+
+
 def read_restaurants(file):
     """ (file) -> (dict, dict, dict)
 
