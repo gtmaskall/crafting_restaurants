@@ -79,8 +79,8 @@ def build_rating_list(name_to_rating, names_final):
      'Mexican Grill': 85,
      'Deep Fried Everything': 52}
     >>> names = ['Queen St. Cafe', 'Dumplings R Us']
-    [[82, 'Queen St. Cafe'], [71, 'Dumplings R Us']]
     >>> build_rating_list(name_to_rating, names)
+    [[82, 'Queen St. Cafe'], [71, 'Dumplings R Us']]
     """
 
 def filter_by_cuisine(names_matching_price, cuisine_to_names, cuisines_list):
