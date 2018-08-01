@@ -83,6 +83,11 @@ def build_rating_list(name_to_rating, names_final):
     [[82, 'Queen St. Cafe'], [71, 'Dumplings R Us']]
     """
 
+    final_list = [[name_to_rating[name], name] for name in names_final]
+    final_list.sort()
+    final_list.reverse()
+    return final_list
+
 def filter_by_cuisine(names_matching_price, cuisine_to_names, cuisines_list):
     """ (list of str, dict of {str: list of str}, list of str) -> list of str
 
